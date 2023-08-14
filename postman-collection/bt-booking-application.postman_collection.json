@@ -1,0 +1,265 @@
+{
+  "info": {
+    "_postman_id": "922602a6-c8de-43cd-8899-247b5e585cdb",
+    "name": "bt-booking-application",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "2052275",
+    "_collection_link": "https://red-desert-505201.postman.co/workspace/camunda~15f8de0f-1a54-4146-bb8c-59392611d814/collection/2052275-922602a6-c8de-43cd-8899-247b5e585cdb?action=share&creator=2052275&source=collection_link"
+  },
+  "item": [
+    {
+      "name": "users",
+      "item": [
+        {
+          "name": "query-users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/v1/bt/users",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "bt",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "query-user",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/v1/bt/users/f4d1e11e-aec4-4e62-a938-35146c2993d5",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "bt",
+                "users",
+                "f4d1e11e-aec4-4e62-a938-35146c2993d5"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "devices",
+      "item": [
+        {
+          "name": "query-devices",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/v1/bt/devices",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "bt",
+                "devices"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "query-device",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/v1/bt/devices/53f681cd-be9e-4d11-896e-dd31297357f2",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "bt",
+                "devices",
+                "53f681cd-be9e-4d11-896e-dd31297357f2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "book",
+      "item": [
+        {
+          "name": "book-device",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"deviceId\": \"53f681cd-be9e-4d11-896e-dd31297357f2\",\n  \"userId\": \"f4d1e11e-aec4-4e62-a938-35146c2993d5\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/api/v1/bt/bookings",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "bt",
+                "bookings"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "unbook",
+      "item": [
+        {
+          "name": "unbook",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"deviceId\": \"53f681cd-be9e-4d11-896e-dd31297357f2\",\n  \"userId\": \"f4d1e11e-aec4-4e62-a938-35146c2993d5\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/api/v1/bt/bookings",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "bt",
+                "bookings"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "booking-history",
+      "item": [
+        {
+          "name": "device-booking-history",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/v1/bt/devices/53f681cd-be9e-4d11-896e-dd31297357f2/bookings",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "bt",
+                "devices",
+                "53f681cd-be9e-4d11-896e-dd31297357f2",
+                "bookings"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "device-spec-query",
+      "item": [
+        {
+          "name": "device-spec-query-with-id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/v1/bt/devices/spec/2c0544ed-0c27-4687-9177-9ddb7c5aac99",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "bt",
+                "devices",
+                "spec",
+                "2c0544ed-0c27-4687-9177-9ddb7c5aac99"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "device-spec-query-with-brand-name-and-model-name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/v1/bt/devices/spec?brandName=Nokia&modelName=3310",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "bt",
+                "devices",
+                "spec"
+              ],
+              "query": [
+                {
+                  "key": "brandName",
+                  "value": "Nokia"
+                },
+                {
+                  "key": "modelName",
+                  "value": "3310"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

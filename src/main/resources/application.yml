@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:bt_booking_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;INIT=CREATE SCHEMA IF NOT EXISTS bt_booking
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1/bt
+
+bt:
+  device:
+    spec:
+      store:
+        locale: true
+    api:
+      provider: rapid
+  remote:
+    rapid:
+      api:
+        key: ad15af1db9msh027d12625cc9e59p192fbdjsn4972361f70da
+        host: mobile-phone-specs-database.p.rapidapi.com
+        url: https://mobile-phone-specs-database.p.rapidapi.com/gsm/get-specifications-by-brandname-modelname
